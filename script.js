@@ -6,7 +6,7 @@ let randomWord = "";
 async function getRandomWord() {
     const response = await fetch('https://random-word-api.herokuapp.com/word?length=5');
     const data = await response.json();
-    randomWord = data[0].toUpperCase();
+    randomWord = data[0];
 }
 getRandomWord();
 
