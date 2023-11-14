@@ -240,6 +240,9 @@ table tr td {
         flex-direction: column;
     }
 
+#overlay-box{
+    font-size:13px;
+}
     table {
         transform: scale(0.9);
         -webkit-transform: scale(0.9);
