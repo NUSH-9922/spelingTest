@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check your Spelling By Sound</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="SpellingCheck-container">
+        <h3>Spell Check</h3>
+        <div class="box">
+            <div class="play-btn" id="play-btn">
+                <p>Play</p>
+                
+            </div>
+            <div class="show-answer" id="show-answer">Show Answer</div>
+            <input type="text" placeholder="Write Currect text" id="inputText">
+            <div class="cancleAndNextBtn">
+                <div class="check-btn" id="check-btn">Check</div>
+                <div class="Next-btn" id="next-btn">Next</div>
+            </div>
+
+        </div>
+        <div class="output">
+            <table rules="all">
+                <tr>
+                    <th>Total Attempted</th>
+                    <th>Total Wrong Answer</th>
+                    <th>Total Currected Answer</th>
+
+                </tr>
+                <tr>
+                    <td id="totalAttempted">0</td>
+                    <td id="totalAnswer">0</td>
+                    <td id="totalCurrectedAnswer">0</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="overlay-box">
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
