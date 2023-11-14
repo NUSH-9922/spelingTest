@@ -21,9 +21,10 @@ function click() {
     utterance.rate = 0.7;
     speechSynthesis.speak(utterance);
     // ********************************************** animated Png *******************************************[]
-    document.getElementById("play-btn").innerHTML = `<img src="icons8-dots-loading-unscreen.png" alt="" id="AnimatedPng">`
+    document.getElementById("play-btn").style.width = "200px"
+    document.getElementById("play-btn").innerHTML = `<img src="icons8-dots-loading.gif" alt="" id="AnimatedPng">`
     setTimeout(function () {
-        // Restore the original content (replace this with your original content)
+        document.getElementById("play-btn").style.width = "100px"
         document.getElementById("play-btn").innerHTML = `<p>Play</p>`;
     }, 500);
 

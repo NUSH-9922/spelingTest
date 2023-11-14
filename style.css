@@ -28,7 +28,7 @@ body {
 
 .box {
     width: 400px;
-    height: 300px;
+    height: auto;
     box-shadow: rgba(34, 34, 53, 0.2) 0px 0px 29px 0px;
     display: flex;
     align-items: center;
@@ -52,20 +52,25 @@ body {
     cursor: pointer;
     margin-bottom: 20px;
     position: relative;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
 }
 
 
-#AnimatedPng{
+#AnimatedPng {
     position: absolute;
     z-index: 99;
     width: 100%;
     height: 100%;
     object-fit: COVER;
-    transform: scale(0.6);
-    -webkit-transform: scale(0.6);
-    -moz-transform: scale(0.6);
-    -ms-transform: scale(0.6);
-    -o-transform: scale(0.6);
+    transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    -ms-transform: scale(0.4);
+    -o-transform: scale(0.4);
 }
 
 .show-answer {
@@ -104,10 +109,11 @@ input {
 
 .cancleAndNextBtn {
     width: 100%;
-    height: 50px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
+   
 
 }
 
@@ -126,7 +132,7 @@ input {
     margin-bottom: 20px;
     cursor: pointer;
     text-shadow: 0px 0px 2px;
-
+    flex-shrink: 0;
 }
 
 .Next-btn {
@@ -144,6 +150,7 @@ input {
     margin-bottom: 20px;
     cursor: pointer;
     text-shadow: 0px 0px 2px;
+    flex-shrink: 0;
 }
 
 
@@ -203,5 +210,43 @@ table tr td {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-     opacity: 1;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .SpellingCheck-container {
+        justify-content: start;
+        padding-top: 70px;
+
+    }
+
+    .SpellingCheck-container h3 {
+        font-size: 50PX;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    .cancleAndNextBtn {
+        flex-direction: column;
+    }
+
+    table {
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+        font-size: 10px;
+    }
+
 }
