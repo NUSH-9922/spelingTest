@@ -36,14 +36,18 @@ function click() {
 let showAnswer = document.getElementById("show-answer");
 let showAnswerToggelValue = 0;
 
+
 showAnswer.onclick = function () {
+    let  finalData =randomWord.charAt(0).toUpperCase() + randomWord.slice(1);
     if (showAnswerToggelValue === 0) {
-        showAnswer.innerText = randomWord;
+        showAnswer.innerText = finalData;
         showAnswerToggelValue = 1;
+      
     } else if (showAnswerToggelValue === 1) {
         showAnswer.innerText = "Show Answer";
         showAnswerToggelValue = 0;
     }
+ 
 }
 
 // *********************************************** defaust values ************************************************
@@ -57,9 +61,11 @@ const overlay = document.getElementById("overlay-box");
 document.getElementById('check-btn').addEventListener("click", checkSpelling);
 
 function checkSpelling() {
+    let a;
+    let  finalData =randomWord.charAt(0).toUpperCase() + randomWord.slice(1);
     TotalAttempted += 1;
     document.getElementById('check-btn').style.display = "none";
-    if (inputText.value === randomWord) {
+    if (inputText.value === finalData) {
         overlay.innerText = ` You are absolutely right`;
         totalCurrectedAnswer++;
     } else {
@@ -96,8 +102,10 @@ function showOverlay() {
         top: "40px",
         duration: 1,
         onComplete: function () {
+          setTimeout(function(){
             document.getElementById("overlay-box").style.display = "none"
             document.getElementById("overlay-box").style.top = "-40px"
+          },1000)
         }
     })
 }
